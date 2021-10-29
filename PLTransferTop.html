@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      PLTransferTop
+    </title>
+    <style>
+      div{
+          text-align: center;
+      }
+
+      body{ font-size: 0.8em; }
+      p.regif-title{
+          font-weight:800;
+          font-size:1.2em;
+      }
+      td{
+          white-space:pre-line; word-wrap: break-word; word-break: break-all;
+      }
+      td.fixWidth{
+          min-width:50px;
+          max-width:300px;
+      }
+      td.fixWidth2{
+          min-width:50px;
+          max-width:400px;
+      }
+      footer div p.info{
+          font-weight:300;
+          font-size:0.7em;
+      }
+      a {
+        color:black;text-decoration:none;
+      }
+      a:hover {
+          color:#09f;
+      }
+
+
+      .theme-default {
+          border: 3px solid #000;
+          border-collapse: collapse;
+      }
+      .theme-default td,
+      .theme-default th{
+          border: 1px solid #000;
+          border-top: 1px dashed #555;
+          border-bottom: 1px dashed #555;
+          padding: 3px;
+      }
+      .theme-default th{
+          background: #bbb;
+      }
+      .theme-default tbody td.reserved{
+          color: #bbb;
+          font-weight:200;
+          background : #eee;
+          /* text-decoration:line-through; */
+          text-decoration-color:#888;
+      }
+      .theme-default tbody tr.reg{
+          border-top: 2px solid #000;
+      }
+
+
+      .theme-spring{
+          border-collapse: collapse;
+          font-size: 1.em;
+          min-width: 800px;
+          border-radius: 5px 5px 0 0 ;
+          overflow: hidden;
+          box-shadow: 0 -10px 20px rgba(0,0,0,0.15);
+      }
+      .theme-spring th,
+      .theme-spring td {
+          padding:5px 10px;
+      }
+      .theme-spring thead tr {
+          background-color: #009879;
+          color: #ffffff;
+          text-align:center;
+          font-weight: bold;
+      }
+      .theme-spring tbody tr{
+          border-bottom: 1px solid #ddd;
+      }
+      .theme-spring tbody td{
+          border: 1px solid #ddd;
+      }
+      .theme-spring tbody tr:last-of-type{
+          border-bottom: 3px solid #009879;
+      }
+      .theme-spring tbody tr.active-row {
+          font-weight: blod;
+          color: #009879;
+      }
+      .theme-spring tbody td.reserved{
+          color: #aaa;
+          background : #fffff0;
+          /* font-style:italic; */
+          font-weight:200;
+          font-size:1.0em;
+      }
+      .theme-spring tbody tr.green{
+          background :#fffff0 ;
+      }
+
+    </style>
+  </head>
+  <body>
+  <header align="center">
+  <p class="regif-title"> PLTransferTop Interface Document </p>
+  </header>
+  <div class="table">
+  <table  align="center" class="theme-default">
+      <br/>
+
+      <thead>
+        <tr align="center" >
+          <th>AddressOffset</th>
+          <th>RegName</th>
+          <th>Description</th>
+          <th>Width</th>
+          <th>Section</th>
+          <th>FieldName</th>
+          <th>R/W</th>
+          <th>Reset value</th>
+          <th>Field-Description</th>
+        </tr>
+      <thead>
+
+      <tbody>
+          <tr class="reg" align="left">
+            <td align="center" rowspan="2">0x0</td>
+            <td align="left" rowspan="2">OUTCMDREGS</td>
+            <td class="fixWidth" align="center" rowspan="2">outCmd </td>
+            <td align="center" rowspan="2">64</td>
+            <td class="reserved" >[63:32]</td>
+            <td class="reserved" >--</td>
+            <td class="reserved" align="center">NA</td>
+            <td class="reserved" align="right">32'b0</td>
+            <td class="reserved fixWidth2" >Reserved</td>
+          </tr>          <tr align="left">
+            <td class="" >[31:0]</td>
+            <td class="" ><local $anon></td>
+            <td class="" align="center">RW</td>
+            <td class="" align="right">32'b0</td>
+            <td class=" fixWidth2" >data_startaddr</td>
+          </tr>
+          <tr class="reg" align="left">
+            <td align="center" rowspan="2">0x8</td>
+            <td align="left" rowspan="2">OUTCMDREGS</td>
+            <td class="fixWidth" align="center" rowspan="2">outCmd </td>
+            <td align="center" rowspan="2">64</td>
+            <td class="reserved" >[63:32]</td>
+            <td class="reserved" >--</td>
+            <td class="reserved" align="center">NA</td>
+            <td class="reserved" align="right">32'b0</td>
+            <td class="reserved fixWidth2" >Reserved</td>
+          </tr>          <tr align="left">
+            <td class="" >[31:0]</td>
+            <td class="" ><local $anon></td>
+            <td class="" align="center">RW</td>
+            <td class="" align="right">32'b0</td>
+            <td class=" fixWidth2" >data_length</td>
+          </tr>
+          <tr class="reg" align="left">
+            <td align="center" rowspan="2">0x10</td>
+            <td align="left" rowspan="2">OUTCMDREGS</td>
+            <td class="fixWidth" align="center" rowspan="2">outCmd </td>
+            <td align="center" rowspan="2">64</td>
+            <td class="reserved" >[63:32]</td>
+            <td class="reserved" >--</td>
+            <td class="reserved" align="center">NA</td>
+            <td class="reserved" align="right">32'b0</td>
+            <td class="reserved fixWidth2" >Reserved</td>
+          </tr>          <tr align="left">
+            <td class="" >[31:0]</td>
+            <td class="" ><local $anon></td>
+            <td class="" align="center">RW</td>
+            <td class="" align="right">32'b0</td>
+            <td class=" fixWidth2" >siync_cycle</td>
+          </tr>
+          <tr class="reg" align="left">
+            <td align="center" rowspan="1">0x18</td>
+            <td align="left" rowspan="1">OUTCMDREGS</td>
+            <td class="fixWidth" align="center" rowspan="1">outCmd </td>
+            <td align="center" rowspan="1">64</td>
+            <td class="reserved" >[63:0]</td>
+            <td class="reserved" >--</td>
+            <td class="reserved" align="center">NA</td>
+            <td class="reserved" align="right">64'b0</td>
+            <td class="reserved fixWidth2" >Reserved</td>
+          </tr>
+          <tr class="reg" align="left">
+            <td align="center" rowspan="2">0x20</td>
+            <td align="left" rowspan="2">INCMDREGS</td>
+            <td class="fixWidth" align="center" rowspan="2">inCmd </td>
+            <td align="center" rowspan="2">64</td>
+            <td class="reserved" >[63:32]</td>
+            <td class="reserved" >--</td>
+            <td class="reserved" align="center">NA</td>
+            <td class="reserved" align="right">32'b0</td>
+            <td class="reserved fixWidth2" >Reserved</td>
+          </tr>          <tr align="left">
+            <td class="" >[31:0]</td>
+            <td class="" ><local $anon></td>
+            <td class="" align="center">RW</td>
+            <td class="" align="right">32'b0</td>
+            <td class=" fixWidth2" >data_startaddr</td>
+          </tr>
+          <tr class="reg" align="left">
+            <td align="center" rowspan="2">0x28</td>
+            <td align="left" rowspan="2">INCMDREGS</td>
+            <td class="fixWidth" align="center" rowspan="2">inCmd </td>
+            <td align="center" rowspan="2">64</td>
+            <td class="reserved" >[63:32]</td>
+            <td class="reserved" >--</td>
+            <td class="reserved" align="center">NA</td>
+            <td class="reserved" align="right">32'b0</td>
+            <td class="reserved fixWidth2" >Reserved</td>
+          </tr>          <tr align="left">
+            <td class="" >[31:0]</td>
+            <td class="" ><local $anon></td>
+            <td class="" align="center">RW</td>
+            <td class="" align="right">32'b0</td>
+            <td class=" fixWidth2" >data_length</td>
+          </tr>
+          <tr class="reg" align="left">
+            <td align="center" rowspan="2">0x30</td>
+            <td align="left" rowspan="2">INCMDREGS</td>
+            <td class="fixWidth" align="center" rowspan="2">inCmd </td>
+            <td align="center" rowspan="2">64</td>
+            <td class="reserved" >[63:32]</td>
+            <td class="reserved" >--</td>
+            <td class="reserved" align="center">NA</td>
+            <td class="reserved" align="right">32'b0</td>
+            <td class="reserved fixWidth2" >Reserved</td>
+          </tr>          <tr align="left">
+            <td class="" >[31:0]</td>
+            <td class="" ><local $anon></td>
+            <td class="" align="center">RW</td>
+            <td class="" align="right">32'b0</td>
+            <td class=" fixWidth2" >siync_cycle</td>
+          </tr>
+          <tr class="reg" align="left">
+            <td align="center" rowspan="1">0x38</td>
+            <td align="left" rowspan="1">INCMDREGS</td>
+            <td class="fixWidth" align="center" rowspan="1">inCmd </td>
+            <td align="center" rowspan="1">64</td>
+            <td class="reserved" >[63:0]</td>
+            <td class="reserved" >--</td>
+            <td class="reserved" align="center">NA</td>
+            <td class="reserved" align="right">64'b0</td>
+            <td class="reserved fixWidth2" >Reserved</td>
+          </tr>
+      </tbody>
+  </table>
+  </div>
+  <footer align="center">
+  <div> <p class="info">Powered By <a href="https://spinalhdl.github.io/SpinalDoc-RTD/"> SpinalHDL </a> </p> </div>
+  </footer>
+  </body>
+</html>
